@@ -20,7 +20,7 @@ body {
   height: 2px;
   background: linear-gradient(-45deg, #39c7ff, rgba(0, 0, 255, 0));
   border-radius: 999px;
-  filter: drop-shadow(0 0 6px #6686f0);
+  filter: drop-shadow(0 0 6px #a4b8f9);
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star::before {
