@@ -1,11 +1,12 @@
-import './App.css';
-import FirstPage from "./components/FirstPage";
+import "./App.css";
+// import FirstPage from "./components/FirstPage";
+import Shootingstars from "./components/Shootingstars";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <FirstPage/> 
+    <div>
+      <header>
+        <Shootingstars/>
       </header>
     </div>
   );

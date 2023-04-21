@@ -2,9 +2,7 @@ import React from "react";
 import "../styles/FirstPage.css";
 
 function FirstPage() {
-  
   return (
-  
     <div>
       <section class="nav">
         <h1>FRONTEND TRENDS</h1>
