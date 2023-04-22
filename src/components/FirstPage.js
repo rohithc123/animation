@@ -2,18 +2,20 @@ import React from "react";
 import "../styles/FirstPage.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { useCallback } from "react";
 
 function FirstPage() {
-  const particlesInit = async (main) => {
-    console.log(main);
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(main);
-  };
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <div className="App">
       {/* <Particles 
@@ -82,12 +84,13 @@ function FirstPage() {
           },
         }}
       /> */}
-      <Particles
+      {/* <Particles
+        
         id="tsparticles"
         options={{
           background: {
             color: {
-              value: "#1e1f26",
+              value: " #1e1f26",
             },
           },
           fpsLimit: 60,
@@ -153,7 +156,7 @@ function FirstPage() {
               value: 0.5,
             },
             shape: {
-              type: "square",
+              type: "circle",
             },
             size: {
               random: true,
@@ -162,37 +165,116 @@ function FirstPage() {
           },
           detectRetina: true,
         }}
+      /> */}
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          background: {
+            color: {
+              value: "#1e1f26",
+            },
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 1000,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: ["#03dac6", "#ff0266", "#000000"],
+            },
+            links: {
+              color: {
+                value: ["#ffffff"],
+              },
+              distance: 150,
+              enable: true,
+              opacity: 0.7,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              directions: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 5,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 100,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
       />
       <section>
-        {/* <h1>FRONTEND TRENDS</h1> */}
-        <h3 class="span loader">
-          <span class="m">S</span>
-          <span class="m">O</span>
-          <span class="m">C</span>
-          <span class="m">I</span>
-          <span class="m">E</span>
-          <span class="m">T</span>
-          <span class="m">Y</span>
-          <span class="m">&nbsp;</span>
-          <span class="m">O</span>
-          <span class="m">F</span>
-          <span class="m">&nbsp;</span>
-          <span class="m">C</span>
-          <span class="m">O</span>
-          <span class="m">D</span>
-          <span class="m">E</span>
-          <span class="m">R</span>
-          <span class="m">S</span>
-          <span class="m">&nbsp;</span>
+        <h3 className="span loader">
+          <span className="m">S</span>
+          <span className="m">O</span>
+          <span className="m">C</span>
+          <span className="m">I</span>
+          <span className="m">E</span>
+          <span className="m">T</span>
+          <span className="m">Y</span>
+          <span className="m">&nbsp;</span>
+          <span className="m">O</span>
+          <span className="m">F</span>
+          <span className="m">&nbsp;</span>
+          <span className="m">C</span>
+          <span className="m">O</span>
+          <span className="m">D</span>
+          <span className="m">E</span>
+          <span className="m">R</span>
+          <span className="m">S</span>
+          <span className="m">&nbsp;</span>
 
-          <span class="m">C</span>
-          <span class="m">L</span>
-          <span class="m">U</span>
-          <span class="m">B</span>
+          <span className="m">C</span>
+          <span className="m">L</span>
+          <span className="m">U</span>
+          <span className="m">B</span>
         </h3>
       </section>
+      {/* <div className="ign_btn">INAUGURATE</div> */}
 
-      <canvas class="background"></canvas>
+      {/* <canvas class="background"></canvas> */}
     </div>
   );
 }
