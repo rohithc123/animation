@@ -250,27 +250,37 @@ a {
 .loader span:nth-child(22) {
   -webkit-animation-delay: 2.1s;
 }
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .ign_btn {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.8em 1.7em;
+  /* border-radius: 0.2em; */
   color: #ff0266;
-  font-size: 16px;
+  font-size: 1em;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
+  align-items: center;
+  font-weight: 700;
+  /* transition: 0.5s; */
+  margin-top: 2em;
   letter-spacing: 4px;
 }
-
+/* 
 .ign_btn span {
   position: absolute;
   display: flex;
-  border: 2px solid rebeccapurple;
-  padding: 0.5em;
-}
+  align-items: center;
+  font-weight: 900;
+  border: 20px solid rebeccapurple;
+  /* padding: 0.5em; 
+} */
 /* 
 .ign_btn span:nth-child(1) {
   top: 0;

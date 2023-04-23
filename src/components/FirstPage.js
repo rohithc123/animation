@@ -17,11 +17,10 @@ function FirstPage() {
     await console.log(container);
   }, []);
 
-  
-    const websiteredirect = () => {
-      window.location.replace('http://codingclub.blueswype.in/');
-    };
-  
+  const websiteredirect = () => {
+    window.location.replace("http://codingclub.blueswype.in/");
+  };
+
   return (
     <div className="App">
       {/* <Particles 
@@ -267,9 +266,9 @@ function FirstPage() {
           <span className="m">C</span>
           <span className="m">O</span>
           <span className="m">D</span>
-          <span className="m">E</span>
-          <span className="m">R</span>
-          <span className="m">S</span>
+          <span className="m">I</span>
+          <span className="m">N</span>
+          <span className="m">G</span>
           <span className="m">&nbsp;</span>
 
           <span className="m">C</span>
@@ -278,9 +277,11 @@ function FirstPage() {
           <span className="m">B</span>
         </h3>
       </section>
-      <div className="ign_btn">
-        <button onClick={websiteredirect}>INAUGURATE</button>{" "}
-      </div>
+      <div className="btn">
+        <button className="ign_btn" onClick={websiteredirect}>
+          INAUGURATE
+        </button>
+      </div>l
 
       {/* <canvas class="background"></canvas> */}
     </div>
