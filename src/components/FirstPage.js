@@ -16,6 +16,12 @@ function FirstPage() {
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
+
+  
+    const websiteredirect = () => {
+      window.location.replace('http://codingclub.blueswype.in/');
+    };
+  
   return (
     <div className="App">
       {/* <Particles 
@@ -272,7 +278,9 @@ function FirstPage() {
           <span className="m">B</span>
         </h3>
       </section>
-      {/* <div className="ign_btn">INAUGURATE</div> */}
+      <div className="ign_btn">
+        <button onClick={websiteredirect}>INAUGURATE</button>{" "}
+      </div>
 
       {/* <canvas class="background"></canvas> */}
     </div>
